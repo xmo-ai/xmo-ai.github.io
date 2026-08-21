@@ -1,0 +1,17 @@
+// Local theme color overrides.
+// These override the gem defaults in al_folio_core/_sass/_themes.scss.
+// Gem defaults: light = purple #b509ac, dark = cyan #2698ba
+
+:root {
+  --global-theme-color: #0076df;
+  --global-hover-color: #0076df;
+  --global-text-color: #000000;
+  --global-text-color-light: #828282;
+}
+
+html[data-theme="dark"] {
+  --global-theme-color: #2698ba;
+  --global-hover-color: #2698ba;
+  --global-text-color: #e0e0e0;
+  --global-text-color-light: #9e9e9e;
+}
