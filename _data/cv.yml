@@ -1,189 +1,98 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Mo Xu
+  label: Ph.D. Student in Computer Sciences
+  email: xmo@cs.wisc.edu
+  location: Madison, WI
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+  summary: "Research Interests: Embodied AI, Robot Learning, Reinforcement Learning, Dexterous Manipulation, Sim-to-Real Transfer, Vision-Language-Action Models, World Models"
 
   social_networks:
-    - network: X
-      username: AlbertEinstein
-    - network: GitHub
-      username: example
     - network: LinkedIn
-      username: example
-
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+      username: mo-x-2b3759233
+    - network: GitHub
+      username: AlfredMoore
+    - network: Google Scholar
+      username: P1vaon0AAAAJ
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+      - institution: University of Wisconsin - Madison
+        location: Madison, WI
+        url: https://www.wisc.edu/
+        area: Computer Sciences
+        studyType: Ph.D.
+        start_date: 2024
+        end_date: present
+
+      - institution: University of Michigan - Ann Arbor
+        location: Ann Arbor, MI
+        url: https://umich.edu/
+        area: Electrical and Computer Engineering
+        studyType: Master
+        start_date: 2022
+        end_date: 2023
+
+    Research Experience:
+      - company: University of Wisconsin–Madison | NSF HAND ERC
+        position: "Bimanual Dexterous Manipulation for Real-World Jar Opening"
+        location: Madison, WI
+        start_date: 2025
+        end_date: present
         highlights:
-          - Description 1.
-          - Description 2.
+          - Developed reinforcement learning policies for **bimanual dexterous manipulation**, coordinating a dual-arm, multi-fingered robot system for stable grasp acquisition and continuous jar twisting.
+          - Designed a **geometric grasp representation** and a **three-stage curriculum** to support grasp acquisition and subsequent twisting, while enabling emergent finger-gait behaviors beyond hand kinematic limits.
+          - Built massively parallel GPU simulation environments with **mjlab and MuJoCo Warp**, and trained PPO policies with progressive domain randomization over object properties, robot control, and observations for robust sim-to-real transfer.
+          - Deployed the learned policies on a real dual-Franka platform with TESOLLO dexterous hands, integrating RGB-D object state estimation and real-time robot control to evaluate generalization across diverse household containers.
 
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
+      - company: University of Wisconsin–Madison | NSF HAND ERC
+        position: "Non-Verbal Human Behavior Understanding for Interactive VLA Systems"
+        location: Madison, WI
+        start_date: 2026
+        end_date: present
         highlights:
-          - Description 1.
-          - Description 2.
+          - Developing a **System 1–System 2 architecture** for non-verbal human-robot interaction, translating human behavior into semantic interpretations, robot instructions, and executable actions.
+          - Designed a two-stage **System 1** pipeline using Qwen vision-language models, with a fast VLM for interpreting human gestures and human-object interactions followed by a reasoning VLM that generates context-aware robot instructions.
+          - Integrated **π0.5 VLA** as **System 2** to execute the generated instructions through vision-conditioned robot actions, enabling robot interaction driven by non-verbal human cues.
 
-    Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: University of Wisconsin–Madison
+        position: "Immersive Robotic Telepresence via Online 3D Gaussian Splatting"
+        location: Madison, WI
+        start_date: 2025
+        end_date: 2026
         highlights:
-          - Relativity
-          - Description 2.
-
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
-        highlights:
-          - Description 1.
-          - Description 2.
-
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
-        highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
-
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
-
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+          - Developed an end-to-end **immersive robotic telepresence system** on a Stretch 2 robot, integrating online 3D reconstruction, rendering, and streaming for low-latency remote interaction.
+          - Developed an online **3D Gaussian Splatting (3DGS)** pipeline for real-time scene reconstruction, achieving high-fidelity rendering under onboard compute constraints with over **4× speedup** compared with the baseline pipeline.
 
     Publications:
-      - title: Zur Elektrodynamik bewegter Körper
+      - title: "Toward Real-time High-fidelity Immersive Robotic Telepresence via Online 3D Gaussian Splatting"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+          - Jingxin Du
+          - "**Mo Xu**"
+          - et al.
+        publisher: "IEEE Robotics and Automation Letters (RA-L)"
+        releaseDate: 2026
+        url: https://ieeexplore.ieee.org/abstract/document/11551306
 
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
+      - title: "Learning Bimanual Dexterous Jar Opening with Emergent Finger Gaiting"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
+          - "**Mo Xu**"
+          - et al.
+        publisher: "Under review at IEEE RA-L"
+        releaseDate: 2026
 
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
+    Industry Experience:
+      - company: ABB
+        position: Electronics Engineering Intern
+        location: Shanghai, China
+        start_date: 2021-06
+        end_date: 2021-08
 
-    Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+    Technical Skills:
+      - name: Robot Learning
+        keywords: "Reinforcement Learning, Sim-to-Real, Domain Randomization, Curriculum Learning, Dexterous Manipulation, VLM/VLA, World Model, TensorRT"
 
-    Languages:
-      - name: German
-        summary: "Native speaker"
+      - name: Robotics & Simulation
+        keywords: "MuJoCo/Mjlab, Isaac Sim/Isaac Lab, ROS/ROS 2, MoveIt, Franka Panda, Dexterous Hands, RGB-D Perception"
 
-      - name: English
-        summary: "Fluent"
-
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
-
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
-
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - name: Programming
+        keywords: "Python, C/C++, PyTorch, TensorFlow, Docker, Linux, Git"
