@@ -19,13 +19,15 @@ cv:
     Education:
       - institution: University of Wisconsin - Madison
         location: Madison, WI
-        degree: Ph.D. in Computer Sciences
+        degree: Ph.D.
+        area: Computer Sciences
         start_date: 2024
         end_date: present
 
       - institution: University of Michigan - Ann Arbor
         location: Ann Arbor, MI
-        degree: Master in Electrical and Computer Engineering
+        degree: Master
+        area: Electrical and Computer Engineering
         start_date: 2022
         end_date: 2023
 
