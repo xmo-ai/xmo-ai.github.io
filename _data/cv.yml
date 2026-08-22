@@ -1,10 +1,8 @@
 cv:
   name: Mo Xu
-  label: Ph.D. Student in Computer Sciences
+  headline: Ph.D. Student in Computer Sciences, University of Wisconsin-Madison
   email: xmo@cs.wisc.edu
   location: Madison, WI
-  image: ""
-  summary: "Research Interests: Embodied AI, Robot Learning, Reinforcement Learning, Dexterous Manipulation, Sim-to-Real Transfer, Vision-Language-Action Models, World Models"
 
   social_networks:
     - network: LinkedIn
@@ -15,25 +13,24 @@ cv:
       username: P1vaon0AAAAJ
 
   sections:
+    Research Interests:
+      - "Embodied AI, Robot Learning, Reinforcement Learning, Dexterous Manipulation, Sim-to-Real Transfer, Vision-Language-Action Models, World Models"
+
     Education:
       - institution: University of Wisconsin - Madison
         location: Madison, WI
-        url: https://www.wisc.edu/
-        area: Computer Sciences
-        studyType: Ph.D.
+        degree: Ph.D. in Computer Sciences
         start_date: 2024
         end_date: present
 
       - institution: University of Michigan - Ann Arbor
         location: Ann Arbor, MI
-        url: https://umich.edu/
-        area: Electrical and Computer Engineering
-        studyType: Master
+        degree: Master in Electrical and Computer Engineering
         start_date: 2022
         end_date: 2023
 
     Research Experience:
-      - company: University of Wisconsin–Madison | NSF HAND ERC
+      - company: University of Wisconsin-Madison | NSF HAND ERC
         position: "Bimanual Dexterous Manipulation for Real-World Jar Opening"
         location: Madison, WI
         start_date: 2025
@@ -41,27 +38,27 @@ cv:
         highlights:
           - Developed reinforcement learning policies for **bimanual dexterous manipulation**, coordinating a dual-arm, multi-fingered robot system for stable grasp acquisition and continuous jar twisting.
           - Designed a **geometric grasp representation** and a **three-stage curriculum** to support grasp acquisition and subsequent twisting, while enabling emergent finger-gait behaviors beyond hand kinematic limits.
-          - Built massively parallel GPU simulation environments with **mjlab and MuJoCo Warp**, and trained PPO policies with progressive domain randomization over object properties, robot control, and observations for robust sim-to-real transfer.
-          - Deployed the learned policies on a real dual-Franka platform with TESOLLO dexterous hands, integrating RGB-D object state estimation and real-time robot control to evaluate generalization across diverse household containers.
+          - Built massively parallel GPU simulation environments with **mjlab and MuJoCo Warp**, and trained PPO policies with progressive domain randomization for robust sim-to-real transfer.
+          - Deployed the learned policies on a real dual-Franka platform with TESOLLO dexterous hands, integrating RGB-D object state estimation and real-time robot control.
 
-      - company: University of Wisconsin–Madison | NSF HAND ERC
+      - company: University of Wisconsin-Madison | NSF HAND ERC
         position: "Non-Verbal Human Behavior Understanding for Interactive VLA Systems"
         location: Madison, WI
         start_date: 2026
         end_date: present
         highlights:
-          - Developing a **System 1–System 2 architecture** for non-verbal human-robot interaction, translating human behavior into semantic interpretations, robot instructions, and executable actions.
-          - Designed a two-stage **System 1** pipeline using Qwen vision-language models, with a fast VLM for interpreting human gestures and human-object interactions followed by a reasoning VLM that generates context-aware robot instructions.
-          - Integrated **π0.5 VLA** as **System 2** to execute the generated instructions through vision-conditioned robot actions, enabling robot interaction driven by non-verbal human cues.
+          - Developing a **System 1-System 2 architecture** for non-verbal human-robot interaction, translating human behavior into semantic interpretations, robot instructions, and executable actions.
+          - Designed a two-stage **System 1** pipeline using Qwen vision-language models for interpreting human gestures and generating context-aware robot instructions.
+          - Integrated **π0.5 VLA** as **System 2** to execute generated instructions through vision-conditioned robot actions.
 
-      - company: University of Wisconsin–Madison
+      - company: University of Wisconsin-Madison
         position: "Immersive Robotic Telepresence via Online 3D Gaussian Splatting"
         location: Madison, WI
         start_date: 2025
         end_date: 2026
         highlights:
           - Developed an end-to-end **immersive robotic telepresence system** on a Stretch 2 robot, integrating online 3D reconstruction, rendering, and streaming for low-latency remote interaction.
-          - Developed an online **3D Gaussian Splatting (3DGS)** pipeline for real-time scene reconstruction, achieving high-fidelity rendering under onboard compute constraints with over **4× speedup** compared with the baseline pipeline.
+          - Developed an online **3D Gaussian Splatting (3DGS)** pipeline achieving high-fidelity rendering with over **4× speedup** compared with the baseline pipeline.
 
     Publications:
       - title: "Toward Real-time High-fidelity Immersive Robotic Telepresence via Online 3D Gaussian Splatting"
@@ -69,16 +66,16 @@ cv:
           - Jingxin Du
           - "**Mo Xu**"
           - et al.
-        publisher: "IEEE Robotics and Automation Letters (RA-L)"
-        releaseDate: 2026
+        date: 2026
+        journal: "IEEE Robotics and Automation Letters (RA-L)"
         url: https://ieeexplore.ieee.org/abstract/document/11551306
 
       - title: "Learning Bimanual Dexterous Jar Opening with Emergent Finger Gaiting"
         authors:
           - "**Mo Xu**"
           - et al.
-        publisher: "Under review at IEEE RA-L"
-        releaseDate: 2026
+        date: 2026
+        journal: "Under review at IEEE RA-L"
 
     Industry Experience:
       - company: ABB
@@ -88,11 +85,11 @@ cv:
         end_date: 2021-08
 
     Technical Skills:
-      - name: Robot Learning
-        keywords: "Reinforcement Learning, Sim-to-Real, Domain Randomization, Curriculum Learning, Dexterous Manipulation, VLM/VLA, World Model, TensorRT"
+      - label: Robot Learning
+        details: "Reinforcement Learning, Sim-to-Real, Domain Randomization, Curriculum Learning, Dexterous Manipulation, VLM/VLA, World Model, TensorRT"
 
-      - name: Robotics & Simulation
-        keywords: "MuJoCo/Mjlab, Isaac Sim/Isaac Lab, ROS/ROS 2, MoveIt, Franka Panda, Dexterous Hands, RGB-D Perception"
+      - label: Robotics & Simulation
+        details: "MuJoCo/Mjlab, Isaac Sim/Isaac Lab, ROS/ROS 2, MoveIt, Franka Panda, Dexterous Hands, RGB-D Perception"
 
-      - name: Programming
-        keywords: "Python, C/C++, PyTorch, TensorFlow, Docker, Linux, Git"
+      - label: Programming
+        details: "Python, C/C++, PyTorch, TensorFlow, Docker, Linux, Git"
