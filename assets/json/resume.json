@@ -146,29 +146,13 @@
       "name": "Robotics & Simulation",
       "level": "",
       "icon": "fa-solid fa-microchip",
-      "keywords": [
-        "MuJoCo/Mjlab",
-        "Isaac Sim/Isaac Lab",
-        "ROS/ROS 2",
-        "MoveIt",
-        "Franka Panda",
-        "Dexterous Hands",
-        "RGB-D Perception"
-      ]
+      "keywords": ["MuJoCo/Mjlab", "Isaac Sim/Isaac Lab", "ROS/ROS 2", "MoveIt", "Franka Panda", "Dexterous Hands", "RGB-D Perception"]
     },
     {
       "name": "Programming",
       "level": "",
       "icon": "fa-solid fa-code",
-      "keywords": [
-        "Python",
-        "C/C++",
-        "PyTorch",
-        "TensorFlow",
-        "Docker",
-        "Linux",
-        "Git"
-      ]
+      "keywords": ["Python", "C/C++", "PyTorch", "TensorFlow", "Docker", "Linux", "Git"]
     }
   ],
   "languages": [],

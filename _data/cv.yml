@@ -1,7 +1,7 @@
 cv:
   name: Mo Xu
   headline: Ph.D. Student in Computer Sciences, University of Wisconsin-Madison
-  email: xmo@cs.wisc.edu
+  # email: xmo@cs.wisc.edu
   location: Madison, WI
 
   social_networks:
