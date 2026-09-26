@@ -26,6 +26,13 @@ related_publications: false
     --g2t-purple-text: #b39ddb;
     --g2t-red-text: #f08c75;
   }
+  .g2t-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem 1.5rem;
+  }
   .g2t-authors {
     font-size: 1.05rem;
     margin-bottom: 0.2rem;
@@ -33,18 +40,44 @@ related_publications: false
   .g2t-affil {
     color: var(--global-text-color-light);
     font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+  .g2t-logos {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+  }
+  .g2t-logos img {
+    height: 44px;
+    width: auto;
   }
   .g2t-links {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin: 0.8rem 0 0;
+    margin: 0.9rem 0 0;
   }
-  .g2t-btn {
-    border: 1px solid var(--global-theme-color);
+  a.g2t-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border: 1px solid var(--global-divider-color);
     border-radius: 999px;
-    padding: 0.2rem 0.9rem;
+    padding: 0.25rem 0.95rem;
+    color: var(--global-text-color);
     font-size: 0.9rem;
+    font-weight: 500;
+  }
+  a.g2t-btn:hover {
+    border-color: var(--global-theme-color);
+    color: var(--global-theme-color);
+    text-decoration: none;
+  }
+  .g2t-btn .ai-arxiv {
+    color: #b31b1b;
+  }
+  html[data-theme="dark"] .g2t-btn .ai-arxiv {
+    color: #e5484d;
   }
   .g2t-rule {
     display: flex;
@@ -212,6 +245,9 @@ related_publications: false
     margin-top: 0.8rem;
   }
   @media (max-width: 576px) {
+    .g2t-logos img {
+      height: 34px;
+    }
     .g2t-narrow {
       max-width: 100%;
     }
@@ -225,15 +261,24 @@ related_publications: false
   }
 </style>
 
-<p class="g2t-authors"><strong>Mo Xu</strong><sup>1</sup>, Yunfu Deng<sup>1</sup>, Jianuo Wang<sup>2</sup>, Josiah Hanna<sup>1&dagger;</sup>, Bilge Mutlu<sup>1&dagger;</sup></p>
-<p class="g2t-affil"><sup>1</sup>University of Wisconsin-Madison &nbsp; <sup>2</sup>Independent Researcher &nbsp; <sup>&dagger;</sup>Joint senior authors</p>
-
-<!-- Uncomment and fill in when the links are public:
-<div class="g2t-links">
-  <a class="g2t-btn" href="https://arxiv.org/abs/XXXX.XXXXX">Paper</a>
-  <a class="g2t-btn" href="https://github.com/USER/REPO">Code</a>
+<div class="g2t-header">
+  <div>
+    <p class="g2t-authors"><strong>Mo Xu</strong><sup>1</sup>, Yunfu Deng<sup>1</sup>, Jianuo Wang<sup>2</sup>, Josiah Hanna<sup>1&dagger;</sup>, Bilge Mutlu<sup>1&dagger;</sup></p>
+    <p class="g2t-affil"><sup>1</sup>University of Wisconsin-Madison &nbsp; <sup>2</sup>Independent Researcher &nbsp; <sup>&dagger;</sup>Joint senior authors</p>
+  </div>
+  <div class="g2t-logos">
+    <img class="only-light" src="{{ '/assets/img/logos/nsf_erc.png' | relative_url }}" alt="NSF Engineering Research Centers">
+    <img class="only-dark" src="{{ '/assets/img/logos/nsf_erc_dark.png' | relative_url }}" alt="NSF Engineering Research Centers">
+    <img class="only-light" src="{{ '/assets/img/logos/hand.png' | relative_url }}" alt="NSF HAND ERC">
+    <img class="only-dark" src="{{ '/assets/img/logos/hand_dark.png' | relative_url }}" alt="NSF HAND ERC">
+    <img src="{{ '/assets/img/logos/uw_madison.png' | relative_url }}" alt="University of Wisconsin-Madison">
+  </div>
 </div>
--->
+
+<div class="g2t-links">
+  <a class="g2t-btn" href="https://arxiv.org/abs/XXXX.XXXXX"><i class="ai ai-arxiv"></i> arXiv</a>
+  <a class="g2t-btn" href="https://github.com/USER/REPO"><i class="fa-brands fa-github"></i> Code</a>
+</div>
 
 <div class="g2t-rule">
   <span style="background: var(--g2t-teal)"></span>
