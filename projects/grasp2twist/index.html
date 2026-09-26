@@ -4,7 +4,220 @@
   }
 </style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%A4%96&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://xmo-ai.github.io/projects/grasp2twist/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
-  </script> <link rel="stylesheet" href="/assets/al_email_protect/css/email-protect.css"> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Mo</span> Xu </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Grasp2Twist: Learning Bimanual Dexterous Jar Opening by Reinforcement Learning</h1> <p class="post-description">Bimanual dexterous jar opening with a single RL policy, transferred zero-shot to hardware</p> </header> <article> <p><strong>Mo Xu</strong>, Yunfu Deng, Jianuo Wang, Josiah Hanna<sup>†</sup>, Bilge Mutlu<sup>†</sup></p> <p>University of Wisconsin-Madison  ·  <sup>†</sup>Equal senior authors</p> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/grasp2twist/sim2real_setup-480.webp 480w,/assets/img/projects/grasp2twist/sim2real_setup-800.webp 800w,/assets/img/projects/grasp2twist/sim2real_setup-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/grasp2twist/sim2real_setup.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Grasp2Twist real-world and simulated setup" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> </div> <div class="caption"> Real-world and simulated bimanual dexterous jar opening with two robot arms and dexterous hands. </div> <h2 id="abstract">Abstract</h2> <p>Grasp2Twist is a bimanual dexterous manipulation system that learns to grasp and twist open jar lids with reinforcement learning. Learning this task raises three challenges: learning a unified policy for a multi-stage task, sustaining lid twisting, and sim-to-real transfer. We introduce a continuous enclosure measure to guide grasp formation and a binary enclosure indicator to guide the grasp-to-twist transition, both derived from the geometric relationship between the object center and the convex hull formed by the palm and fingertips. Because kinematic constraints limit how far the hand can rotate the lid with fixed contacts, sustained twisting requires finger contact reconfiguration; a three-stage curriculum facilitates exploration of these contact changes and improves robustness for sim-to-real transfer. The learned policy demonstrates finger gaiting, transfers zero-shot to the physical system, and achieves an <strong>88% success rate</strong> across six household containers.</p> <h2 id="method">Method</h2> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/grasp2twist/geom_repre_simplified-480.webp 480w,/assets/img/projects/grasp2twist/geom_repre_simplified-800.webp 800w,/assets/img/projects/grasp2twist/geom_repre_simplified-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/grasp2twist/geom_repre_simplified.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Hand-object enclosure" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> </div> <div class="caption"> The palm and fingertips form a convex hull; its relation to the object center guides grasp formation and the grasp-to-twist transition. </div> <p>A three-stage curriculum then drives finger-gait exploration and sim-to-real robustness.</p> <h2 id="system">System</h2> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/grasp2twist/BimanualDexSys-480.webp 480w,/assets/img/projects/grasp2twist/BimanualDexSys-800.webp 800w,/assets/img/projects/grasp2twist/BimanualDexSys-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/grasp2twist/BimanualDexSys.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Real-world system overview" data-zoomable="" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> </div> <div class="caption"> Real-world system with vision, policy, and driver nodes on two Franka arms with TESOLLO dexterous hands. </div> <h2 id="real-world-results">Real-World Results</h2> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/grasp2twist/real_sequence-480.webp 480w,/assets/img/projects/grasp2twist/real_sequence-800.webp 800w,/assets/img/projects/grasp2twist/real_sequence-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/grasp2twist/real_sequence.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Real-world execution sequence" data-zoomable="" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> </div> <div class="caption"> From pre-grasp to lid removal: the holding hand stabilizes the jar body while the twisting hand rotates the lid, with fingers asynchronously twisting, releasing, repositioning, and re-establishing contact. </div> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/grasp2twist/real_world_instances-480.webp 480w,/assets/img/projects/grasp2twist/real_world_instances-800.webp 800w,/assets/img/projects/grasp2twist/real_world_instances-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/grasp2twist/real_world_instances.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Real-world test instances" data-zoomable="" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> </div> <div class="caption"> Test objects: an in-distribution 3D-printed jar (left) and six out-of-distribution household containers. </div> <ul> <li>On the six household containers, the policy succeeds in <strong>53/60 trials (88%)</strong>, compared with 18/60 (30%) for an open-loop replay baseline.</li> <li>On the 3D-printed jar, it achieves a mean cumulative lid rotation of about 7.1π rad with 45 finger-gait events within 30 seconds.</li> </ul> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Mo Xu. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  </script> <link rel="stylesheet" href="/assets/al_email_protect/css/email-protect.css"> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Mo</span> Xu </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Grasp2Twist: Learning Bimanual Dexterous Jar Opening by Reinforcement Learning</h1> <p class="post-description">Bimanual dexterous jar opening with a single RL policy, transferred zero-shot to hardware</p> </header> <article> <style>
+  :root {
+    --g2t-teal: #1283a6;
+    --g2t-purple: #4d2f87;
+    --g2t-red: #e45b40;
+    --g2t-green: #5ab946;
+    --g2t-yellow: #f2c318;
+    --g2t-teal-text: #1283a6;
+    --g2t-purple-text: #4d2f87;
+    --g2t-red-text: #e45b40;
+  }
+  html[data-theme="dark"] {
+    --g2t-teal-text: #4db6d8;
+    --g2t-purple-text: #b39ddb;
+    --g2t-red-text: #f08c75;
+  }
+  .g2t-authors {
+    font-size: 1.05rem;
+    margin-bottom: 0.2rem;
+  }
+  .g2t-affil {
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+  }
+  .g2t-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.8rem 0 0;
+  }
+  .g2t-btn {
+    border: 1px solid var(--global-theme-color);
+    border-radius: 999px;
+    padding: 0.2rem 0.9rem;
+    font-size: 0.9rem;
+  }
+  .g2t-rule {
+    display: flex;
+    height: 4px;
+    margin: 1rem 0 1.5rem;
+  }
+  .g2t-rule span {
+    flex: 1;
+  }
+  .g2t-tldr {
+    background: color-mix(in srgb, var(--g2t-teal) 9%, transparent);
+    border-left: 4px solid var(--g2t-teal);
+    border-radius: 6px;
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  .g2t-tldr p {
+    margin: 0;
+  }
+  .g2t-tldr p.g2t-tldr-head {
+    color: var(--g2t-teal-text);
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+  .g2t-narrow {
+    max-width: 62%;
+    margin: 0 auto;
+  }
+  .g2t-stages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.9rem;
+    margin: 0.8rem 0 1.5rem;
+  }
+  .g2t-stage {
+    border: 1.5px solid var(--c);
+    background: color-mix(in srgb, var(--c) 7%, transparent);
+    border-radius: 10px;
+    padding: 0.8rem 0.9rem;
+  }
+  .g2t-stage span.g2t-badge {
+    display: inline-block;
+    background: var(--c);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 0.1rem 0.45rem;
+    border-radius: 4px;
+  }
+  .g2t-stage p.g2t-stage-title {
+    color: var(--ct);
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.3rem;
+  }
+  .g2t-stage p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  .g2t-teal {
+    --c: var(--g2t-teal);
+    --ct: var(--g2t-teal-text);
+  }
+  .g2t-purple {
+    --c: var(--g2t-purple);
+    --ct: var(--g2t-purple-text);
+  }
+  .g2t-red {
+    --c: var(--g2t-red);
+    --ct: var(--g2t-red-text);
+  }
+  .g2t-green {
+    --c: var(--g2t-green);
+  }
+  .g2t-gait {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.6rem;
+    margin: 0.8rem 0;
+  }
+  .g2t-gait figure {
+    margin: 0;
+  }
+  .g2t-gait span.g2t-label {
+    display: block;
+    background: var(--c);
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 4px;
+    padding: 0.3rem 0;
+    margin-top: 0.4rem;
+  }
+  .g2t-eval {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 1.2rem;
+    align-items: center;
+    margin-top: 0.8rem;
+  }
+  .g2t-eval figure {
+    margin: 0;
+  }
+  .g2t-bars {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.4rem;
+    margin-top: 0.6rem;
+  }
+  .g2t-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .g2t-bar span.g2t-bar-val {
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+  .g2t-bar-track {
+    display: flex;
+    align-items: flex-end;
+    width: 55%;
+    height: 80px;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+  .g2t-bar-fill {
+    width: 100%;
+    background: var(--g2t-teal);
+    border-radius: 3px 3px 0 0;
+  }
+  .g2t-bar span.g2t-bar-name {
+    font-size: 0.72rem;
+    color: var(--global-text-color-light);
+    text-align: center;
+    margin-top: 0.25rem;
+  }
+  .g2t-stat {
+    background: color-mix(in srgb, var(--g2t-teal) 7%, transparent);
+    border-radius: 10px;
+    padding: 1.1rem 1.2rem;
+  }
+  .g2t-stat p {
+    margin: 0;
+  }
+  .g2t-stat p.g2t-stat-num {
+    color: var(--g2t-teal-text);
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .g2t-stat p.g2t-stat-sub {
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+  }
+  .g2t-stat p.g2t-stat-title {
+    color: var(--g2t-purple-text);
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .g2t-stat p.g2t-stat-note {
+    color: var(--global-text-color-light);
+    font-size: 0.85rem;
+    margin-top: 0.8rem;
+  }
+  @media (max-width: 576px) {
+    .g2t-narrow {
+      max-width: 100%;
+    }
+    .g2t-stages,
+    .g2t-eval {
+      grid-template-columns: 1fr;
+    }
+    .g2t-gait {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style> <p class="g2t-authors"><strong>Mo Xu</strong><sup>1</sup>, Yunfu Deng<sup>1</sup>, Jianuo Wang<sup>2</sup>, Josiah Hanna<sup>1†</sup>, Bilge Mutlu<sup>1†</sup></p> <p class="g2t-affil"><sup>1</sup>University of Wisconsin-Madison   <sup>2</sup>Independent Researcher   <sup>†</sup>Joint senior authors</p> <div class="g2t-rule"> <span style="background: var(--g2t-teal)"></span> <span style="background: var(--g2t-purple)"></span> <span style="background: var(--g2t-red)"></span> <span style="background: var(--g2t-green)"></span> <span style="background: var(--g2t-yellow)"></span> </div> <div class="g2t-tldr"> <p class="g2t-tldr-head">One RL-trained policy grasps and twists open jars with a bimanual dexterous system.</p> <p>One hand reconfigures finger-object contacts to enable sustained lid rotation while the other hand holds the jar.</p> </div> <h2 id="task-and-method">Task and Method</h2> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/grasp2twist/teaser-480.webp 480w,/assets/img/projects/grasp2twist/teaser-800.webp 800w,/assets/img/projects/grasp2twist/teaser-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/grasp2twist/teaser.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Physical system and simulation" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> <div class="caption"> Physical system (left) and simulation (right). The holding hand grasps and stabilizes the jar; the twisting hand grasps and twists the lid by reconfiguring contacts. </div> <p>We guide the fingers to a spatial arrangement during grasping and signal the grasp-to-twist transition.</p> <div class="g2t-narrow"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/grasp2twist/geom_repre_simplified-480.webp 480w,/assets/img/projects/grasp2twist/geom_repre_simplified-800.webp 800w,/assets/img/projects/grasp2twist/geom_repre_simplified-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/grasp2twist/geom_repre_simplified.png" class="img-fluid rounded" width="100%" height="auto" title="Hand-object enclosure" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> <p>We train the policy with a three-stage curriculum.</p> <div class="g2t-stages"> <div class="g2t-stage g2t-teal"> <span class="g2t-badge">STAGE 1</span> <p class="g2t-stage-title">Foundational skill acquisition</p> <p>Learn grasp acquisition and the grasp-to-twist transition.</p> </div> <div class="g2t-stage g2t-purple"> <span class="g2t-badge">STAGE 2</span> <p class="g2t-stage-title">Contact reconfiguration exploration</p> <p>Explore finger contact changes for sustained twisting.</p> </div> <div class="g2t-stage g2t-red"> <span class="g2t-badge">STAGE 3</span> <p class="g2t-stage-title">Sim-to-real adaptation</p> <p>Build sim-to-real robustness with domain randomization.</p> </div> </div> <h2 id="finger-gaiting-in-the-real-world">Finger Gaiting in the Real World</h2> <div class="g2t-gait"> <div class="g2t-teal"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/grasp2twist/gait_twist-480.webp 480w,/assets/img/projects/grasp2twist/gait_twist-800.webp 800w,/assets/img/projects/grasp2twist/gait_twist-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/grasp2twist/gait_twist.jpg" class="img-fluid rounded" width="100%" height="auto" title="Twist" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> <span class="g2t-label">Twist</span> </div> <div class="g2t-red"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/grasp2twist/gait_release-480.webp 480w,/assets/img/projects/grasp2twist/gait_release-800.webp 800w,/assets/img/projects/grasp2twist/gait_release-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/grasp2twist/gait_release.jpg" class="img-fluid rounded" width="100%" height="auto" title="Release" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> <span class="g2t-label">Release</span> </div> <div class="g2t-green"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/grasp2twist/gait_recontact-480.webp 480w,/assets/img/projects/grasp2twist/gait_recontact-800.webp 800w,/assets/img/projects/grasp2twist/gait_recontact-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/grasp2twist/gait_recontact.jpg" class="img-fluid rounded" width="100%" height="auto" title="Recontact" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> <span class="g2t-label">Recontact</span> </div> <div class="g2t-purple"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/grasp2twist/gait_twist_again-480.webp 480w,/assets/img/projects/grasp2twist/gait_twist_again-800.webp 800w,/assets/img/projects/grasp2twist/gait_twist_again-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/grasp2twist/gait_twist_again.jpg" class="img-fluid rounded" width="100%" height="auto" title="Twist again" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> <span class="g2t-label">Twist again</span> </div> </div> <p>Fingers release, reposition, and re-establish contact to continue twisting beyond the motion range of a fixed grasp.</p> <h2 id="physical-evaluation-on-household-containers">Physical Evaluation on Household Containers</h2> <div class="g2t-eval"> <div> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/grasp2twist/containers-480.webp 480w,/assets/img/projects/grasp2twist/containers-800.webp 800w,/assets/img/projects/grasp2twist/containers-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/grasp2twist/containers.jpg" class="img-fluid rounded" width="100%" height="auto" title="Six household containers" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> <div class="g2t-bars"> <div class="g2t-bar"> <span class="g2t-bar-val">8/10</span><div class="g2t-bar-track"><div class="g2t-bar-fill" style="height: 80%"></div></div> <span class="g2t-bar-name">Blue Peanut</span> </div> <div class="g2t-bar"> <span class="g2t-bar-val">9/10</span><div class="g2t-bar-track"><div class="g2t-bar-fill" style="height: 90%"></div></div> <span class="g2t-bar-name">Yellow Mayo</span> </div> <div class="g2t-bar"> <span class="g2t-bar-val">6/10</span><div class="g2t-bar-track"><div class="g2t-bar-fill" style="height: 60%"></div></div> <span class="g2t-bar-name">Pink Glass</span> </div> <div class="g2t-bar"> <span class="g2t-bar-val">10/10</span><div class="g2t-bar-track"><div class="g2t-bar-fill" style="height: 100%"></div></div> <span class="g2t-bar-name">Green Vitamin</span> </div> <div class="g2t-bar"> <span class="g2t-bar-val">10/10</span><div class="g2t-bar-track"><div class="g2t-bar-fill" style="height: 100%"></div></div> <span class="g2t-bar-name">Brown Peanut</span> </div> <div class="g2t-bar"> <span class="g2t-bar-val">10/10</span><div class="g2t-bar-track"><div class="g2t-bar-fill" style="height: 100%"></div></div> <span class="g2t-bar-name">Instant Coffee</span> </div> </div> </div> <div class="g2t-stat"> <p class="g2t-stat-num">88%</p> <p class="g2t-stat-sub">53 / 60 trials</p> <p class="g2t-stat-title">Six household containers</p> <p>10 trials per container</p> <p class="g2t-stat-note">Success: complete lid thread disengagement, verified by open-loop lid lifting by the twisting hand.</p> </div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Mo Xu. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
